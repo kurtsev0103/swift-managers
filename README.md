@@ -199,4 +199,4 @@ dataFetcherManager.exampleRequest { exampleModel in
 }
 ```
 
-## Created by Oleksandr Kurtsev (Copyright © 2021)
+## Created by Oleksandr Kurtsev (Copyright © 2021) [LICENSE](https://github.com/kurtsev0103/SwiftManagers/blob/main/LICENSE)
