@@ -1,7 +1,7 @@
 # SwiftManagers
-My managers package for the easiness of working with the various services.
+## Description
 
-## CONTENTS
+My managers package for the easiness of working with the various services.
 
 - FirebaseAuth - Manager to handle Firebase authentication.
 - FirebaseStorage - Manager for using Firebase Storage cloud storage.
@@ -9,13 +9,13 @@ My managers package for the easiness of working with the various services.
 - NetworkingAlamofire - Network Manager for dispatching URL Requests based on [Alamofire](https://github.com/Alamofire/Alamofire).
 - NetworkingURLSession - Network Manager for dispatching URL Requests based on URLSession.
 
-## HOW TO USE
-Each of the managers is independent of each other. You can download the folder of the desired manager, insert it into your project and start using it right away.
+## Installation
+Download the folder of the desired manager, insert it into your project and start using it right away. Each of the managers is independent of each other.
 P.S. To integrate any manager from the Firebase family. Note the initial initialization of this library in the Firebase documentation. 
 
-# EXAMPLES
+## Samples and Example Usage
 
-## FirebaseAuth
+### FirebaseAuth
 ``` swift
 AuthManager.shared.login(email: "email", password: "password") { result in
     switch result {
@@ -47,7 +47,7 @@ AuthManager.shared.resetPassword(email: "email") { result in
 AuthManager.shared.logout()
 ```
 
-## FirebaseStorage
+### FirebaseStorage
 ``` swift
 let userImage = UIImage() // <- Here should be the image you want to upload.
 let id = "USER_ID"        // <- Here you must specify the ID of the user you want to download from.
@@ -76,7 +76,7 @@ StorageManager.shared.downloadImage(url: url) { (result) in
 }
 ```
 
-## FirebaseFirestore
+### FirebaseFirestore
 ``` swift
 let user = Auth.auth().currentUser! // <- There must be a class User object here.
  // For example when you get a user in the response after registering Firebase.
@@ -105,7 +105,7 @@ FirestoreManager.shared.saveProfile(user: user, userImage: nil) { (result) in
 }
 ```
 
-## NetworkingAlamofire
+### NetworkingAlamofire
 
 - First create a request method in the "NetworkManager.swift" file.
 
@@ -162,7 +162,7 @@ if let object = NetworkHelpers.shared.parseExampleModel(data) {
 }
 ```
 
-## NetworkingURLSession
+### NetworkingURLSession
 
 - First create a request method in the "DataFetcherManager.swift" file.
 
