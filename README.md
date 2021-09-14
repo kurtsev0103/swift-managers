@@ -61,7 +61,7 @@ StorageManager.shared.upload(userPhoto: userImage, userId: id) { (result) in
     }
 }
 
-// ------------------------------------------------------------------------------------------ //
+// ------------------------------------------------------------------------------------- //
 
 guard let url = URL(string: "URL_STRING_TO_IMAGE") else { return }
 
@@ -90,7 +90,7 @@ FirestoreManager.shared.getUserData(user: user) { (result) in
     }
 }
 
-// ------------------------------------------------------------------------------------------ //
+// ------------------------------------------------------------------------------------- //
 
 let user = FirestoreUserModel() // <- There must be a class FirestoreUserModel object here.
 // For example when you get a user in the response after registering Firebase.
