@@ -17,7 +17,7 @@ P.S. To integrate any manager from the Firebase family. Note the initial initial
 
 ### FirebaseAuth
 ``` swift
-AuthManager.shared.login(email: "email", password: "password") { result in
+AuthManager.shared.login(email: "email", password: "pass") { result in
     switch result {
     case .success(let user):
         print(user.providerID)
@@ -26,7 +26,7 @@ AuthManager.shared.login(email: "email", password: "password") { result in
     }
 }
 
-AuthManager.shared.register(email: "email", password: "email", confirmPassword: "email") { result in
+AuthManager.shared.register(email: "email", password: "pass", confirmPassword: "pass") { result in
     switch result {
     case .success(let user):
         print(user.providerID)
@@ -50,7 +50,7 @@ AuthManager.shared.logout()
 ### FirebaseStorage
 ``` swift
 let userImage = UIImage() // <- Here should be the image you want to upload.
-let id = "USER_ID"        // <- Here you must specify the ID of the user you want to download from.
+let id = "USER_ID" // <- Here you must specify the ID of the user you want to download from.
 
 StorageManager.shared.upload(userPhoto: userImage, userId: id) { (result) in
     switch result {
@@ -61,7 +61,7 @@ StorageManager.shared.upload(userPhoto: userImage, userId: id) { (result) in
     }
 }
 
-// ---------------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------ //
 
 guard let url = URL(string: "URL_STRING_TO_IMAGE") else { return }
 
@@ -90,7 +90,7 @@ FirestoreManager.shared.getUserData(user: user) { (result) in
     }
 }
 
-// ---------------------------------------------------------------------------------------------------- //
+// ------------------------------------------------------------------------------------------ //
 
 let user = FirestoreUserModel() // <- There must be a class FirestoreUserModel object here.
 // For example when you get a user in the response after registering Firebase.
